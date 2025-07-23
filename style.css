@@ -563,7 +563,7 @@ i:hover {
   height: 100px;
   resize: none;
 }
-footer a {
+footer .hover_footer {
   color: #000;
   font-weight: bold;
   text-decoration: none;
@@ -572,7 +572,7 @@ footer a {
   display: inline-block;
   margin-right: 40px;
 }
-footer a::after {
+footer .hover_footer::after {
   content: "";
   position: absolute;
   left: 0;
@@ -582,21 +582,21 @@ footer a::after {
   background-color: #006ac6;
   transition: width 0.4s ease-out;
 }
-footer a:hover {
+footer .hover_footer:hover {
   cursor: pointer;
   color: #006ac6;
 }
-footer a:hover i {
+footer .hover_footer:hover i {
   opacity: 1;
   visibility: visible;
 }
 
-footer a:hover::after {
+footer .hover_footer:hover::after {
   width: 100%;
 }
 
 /* Sibling fade animation */
-.footer:has(a:hover) a:not(:hover) {
+.footer:has(.hover_footer:hover) .hover_footer:not(:hover) {
   opacity: 0.4;
 }
 /* Responsive */
